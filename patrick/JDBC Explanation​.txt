@@ -1,0 +1,39 @@
+JDBC Explanation​
+
+1.Database Connection (Connection connection)​
+
+  -> Uses DriverManager.getConnection() to connect to MySQL.​
+
+  -> The database URL is "jdbc:mysql://localhost:3306/contact_manager?useSSL=false".​
+
+  -> "root", "" → Replace with your MySQL username and password.​
+
+2.Adding a Contact (addcontact())​
+
+  ->Uses PreparedStatement to insert contact details into the contacts table.​
+
+  ->Prevents SQL Injection.​
+
+ 3.Searching for a Contact (searchContact())​
+
+  ->Queries the contacts table to find a contact by name.​
+
+  ->Returns a Contact object if found.​
+
+ 4.Deleting a Contact (deleteContact())​
+
+  ->Deletes a contact from the database by name.​
+
+ 5.Retrieving All Contacts (getAllContacts())​
+
+  ->Fetches all contacts from the database.​
+
+  ->Uses a List<Contact> to store the results.​
+
+6.Closing the Database Connection (closeConnection())​
+
+​
+
+Ensures proper resource management by closing the connection ​
+
+​
